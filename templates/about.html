@@ -1,0 +1,12 @@
+{% extends 'machotelayout.html' %} <!-- extends has an opening but no closing -->
+
+{% block contenido %}
+   <p>about</p>
+   {% for post in posts %}
+   
+   {{ post.author }} 
+
+   {% endfor %}
+
+{% endblock %}
+
