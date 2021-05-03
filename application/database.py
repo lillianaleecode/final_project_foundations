@@ -1,4 +1,4 @@
-#intento
+#intento: https://www.youtube.com/watch?v=byHcYRpMgI4
 import sqlite3
 
 conn = sqlite3.connect('customer.db')
