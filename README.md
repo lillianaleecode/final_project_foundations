@@ -1,5 +1,3 @@
-users.sqlite3, customer.db, and database.py, contact doesnt work.,
-
 #python
 #from application import db
 #db.create_all()

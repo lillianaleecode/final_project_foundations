@@ -38,15 +38,15 @@ login_manager = LoginManager(app)
 
 posts= [
   {
-      'author':'Lilli',
-      'title':'Blog 1',
-      'content': 'this is my first blog!',
-      'date_posted': 'April 20th, 2020',
+      'author':'Co-authored by Pippa Elliott, MRCVS',
+      'title':'How to Take Care of a Cat',
+      'content': 'With their playful personalities, affectionate behavior, and adorable faces, cats can be the ideal pet. But, despite popular opinion, cats are not maintenance-free! To keep your cat healthy and happy, you need to know how to take care of and provide the best possible life for your new furry friend.',
+      'date_posted': 'Last Updated: April 10, 2021',
   },
     {
-      'author':'Lee',
-      'title':'Blog 2',
-      'content': 'this is my second blog!',
+      'author':'Stacy Hackett',
+      'title':'Cats 101: Basic Health & Care Tips to Keep Your Cat Healthy',
+      'content': "How often do you take your cat to the veterinarian? In observance of National Cat Health Month, we want to remind you that even if your cat does not appear to be sick, preventative care is important. Between visits to your cat's veterinarian, here are 10 ways to keep your cat healthy.",
       'date_posted': 'April 21th, 2020',
   },
 
@@ -135,7 +135,7 @@ def register():
     return redirect(url_for('login'))
   return render_template('register.html', title= 'Register', form=form)
 
-# #corey
+
 # # @app.route('/register', methods=["GET", "POST"])
 # def register():
 #   form = RegistrationForm()
@@ -144,7 +144,7 @@ def register():
 #     return redirect(url_for('home'))
 #   return render_template('register.html', title= 'Register', form=form)
 
-#for the form (corey):
+#for the form
 @app.route('/login', methods=["GET", "POST"])
 def login():
   form = LoginForm()
@@ -157,7 +157,7 @@ def login():
         flash('log in unsucessful, please check email and password','danger')
   return render_template('login.html', title= 'Login', form=form)
 
-#corey
+
 # @app.route('/login', methods=["GET", "POST"])
 # def login():
 #   form = LoginForm()
@@ -169,59 +169,7 @@ def login():
 #       flash('log in unsucessful, please check username and password','danger')
 #   return render_template('login.html', title= 'Login', form=form)
 
-#intento video https://www.youtube.com/watch?v=BnBjhmspw4c
-# @app.route('/login', methods=["GET", "POST"])
-# def login():
-#   form = LoginForm()
-#   error = None
-#   if request.method == 'POST':
-#     if request.form['username'] != 'admin' or request.form['password'] !='admin':
-#       error = 'Invalid credentials. Please try again'
-#     else:
-#       session['logged_in'] = True
-#       return redirect(url_for('home'))
-#   return render_template('login.html', error=error)
 
-# @app.route('/logout')
-# def logout():
-#   session.pop('logged_in', None)
-#   return redirect(url_for('welcome'))
-
-
-
- #form log in intento 2: Flask Tutorial #8 - Adding, Deleting & Updating Users w/ SQLAlchemy, https://www.youtube.com/watch?v=1nxzOrLWiic
-#@app.route('/login', methods=["GET", "POST"])
-#def login():
- # form = LoginForm()
-  #if request.method =='POST':
-   # session.permanent = True
-    #user = request.form["nm"]
-    #session["user"] = user
-
-    #found_user = User.query.filter_by(name=user).first()
-    #if found_user:
-     # session["email"] = found_user.email
-    #else:
-     # usr = user(user, "")
-      #db.session.add(usr)
-      #db.session.commit()
-    
-    #flash("Login Succesful!")
-    #return redirect(url_for("user"))
-  #else:
-   #  if "user" in session:
-    #   flash("Alreadyd Logged in!")
-     #  return redirect(url_for("user"))
-     #return render_template("login.html", title= 'Login', form=form)  
-
-
-#for the form:
-#@app.route('/contact')
-#def contact():
-  #form = ContactForm()
- # return render_template ('contact.html', title= 'Contact', form=form)
-
-#extra page just in case, not working
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     """Standard `contact` form."""

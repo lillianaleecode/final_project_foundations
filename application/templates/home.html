@@ -1,8 +1,8 @@
 {% extends 'index.html' %} <!-- extends has an opening but no closing -->
 
    {% block content %}
-
-      <p> home</p>
+   <img src="https://www.aspca.org/sites/default/files/cat-care_urine-marking_main-image.jpg " style="width:300px;height:150px;" alt="cats">
+      <h1> EVERYTHING ABOUT CATS</h1>
       
       {% for post in posts %}
          <article class="media content-section">
@@ -13,7 +13,9 @@
             </div>
             <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
             <p class="article-content">{{ post.content }}</p>
+            <img src="https://pngimg.com/uploads/cat/cat_PNG50485.png" style="width:300px;height:150px;" alt="cats">
             </div>
+            
          </article>
       {% endfor %}
 
